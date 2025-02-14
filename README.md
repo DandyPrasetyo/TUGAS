@@ -48,19 +48,20 @@ int[] hargaMenu = {20000, 15000, 12000, 10000, 8000, 20000, 25000};
     System.out.println("3. Hitung Total Biaya");
     System.out.println("4. Selesai");
     //Memberikan opsi interaksi kepada pengguna:
-8.  Tambah Pesanan
-9.  Lihat Daftar Pesanan
-10. Hitung Total Biaya
-11. Keluar dari program
+    Tambah Pesanan
 
-12. Meminta Input dari Pengguna
+- Lihat Daftar Pesanan
+- Hitung Total Biaya
+- Keluar dari program
+
+8.  Meminta Input dari Pengguna
     System.out.print("Masukkan pilihan Anda: ");
     int pilihan = scanner.nextInt();
     scanner.nextLine();
     // Meminta input angka untuk memilih opsi.
     // scanner.nextLine(); digunakan untuk menghindari bug input setelah penggunaan scanner.nextInt();.
 
-13. Menangani Opsi Tambah Pesanan
+9.  Menangani Opsi Tambah Pesanan
     if (pilihan == 1) {
     System.out.print("Masukkan nomor menu yang ingin dipesan: ");
     int nomorMenu = scanner.nextInt();
@@ -68,21 +69,21 @@ int[] hargaMenu = {20000, 15000, 12000, 10000, 8000, 20000, 25000};
     int jumlah = scanner.nextInt();
     scanner.nextLine();
 
-        if (nomorMenu >= 1 && nomorMenu <= menu.length) {
-            pesanan.add(menu[nomorMenu - 1] + " x" + jumlah);
-            harga.add(hargaMenu[nomorMenu - 1] * jumlah);
-            System.out.println(menu[nomorMenu - 1] + " berhasil ditambahkan ke pesanan.\n");
-        } else {
-            System.out.println("Menu tidak valid.\n");
-        }
+         if (nomorMenu >= 1 && nomorMenu <= menu.length) {
+             pesanan.add(menu[nomorMenu - 1] + " x" + jumlah);
+             harga.add(hargaMenu[nomorMenu - 1] * jumlah);
+             System.out.println(menu[nomorMenu - 1] + " berhasil ditambahkan ke pesanan.\n");
+         } else {
+             System.out.println("Menu tidak valid.\n");
+         }
 
     }
 
-14. Meminta input nomor menu & jumlah pesanan.
-15. Memeriksa apakah nomor menu valid.
-16. Menambahkan pesanan ke dalam ArrayList.
+    - Meminta input nomor menu & jumlah pesanan.
+    - Memeriksa apakah nomor menu valid.
+    - Menambahkan pesanan ke dalam ArrayList.
 
-17. Menampilkan Daftar Pesanan
+10. Menampilkan Daftar Pesanan
     else if (pilihan == 2) {
     System.out.println("=== Daftar Pesanan ===");
     int totalSementara = 0;
@@ -93,10 +94,10 @@ int[] hargaMenu = {20000, 15000, 12000, 10000, 8000, 20000, 25000};
     System.out.println("Total Biaya Sementara: Rp" + totalSementara + "\n");
     }
 
-18. Menampilkan daftar pesanan yang telah dimasukkan.
-19. Menghitung total biaya sementara.
+- Menampilkan daftar pesanan yang telah dimasukkan.
+- Menghitung total biaya sementara.
 
-20. Menghitung Total Biaya Akhir
+12. Menghitung Total Biaya Akhir
     else if (pilihan == 3) {
     int totalBiaya = 0;
     for (int h : harga) {
@@ -108,7 +109,7 @@ int[] hargaMenu = {20000, 15000, 12000, 10000, 8000, 20000, 25000};
 // Menjumlahkan seluruh harga dalam ArrayList harga.
 // Menampilkan total biaya akhir.
 
-12. Menutup Progam
+13. Menutup Progam
     else if (pilihan == 4) {
     System.out.println("Terima kasih telah memesan di kafe kami!");
     break;
